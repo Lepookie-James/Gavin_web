@@ -147,7 +147,7 @@ function addYear() {
     document.getElementById("copyYear").textContent = year;
 }
 
-
+/*
 function validateForm(event) {
     event.preventDefault(); // Prevent default form submission
 
@@ -200,3 +200,16 @@ function validateForm(event) {
 
     return isValid;
 }
+    */
+function validate() {
+    // Get the input fields and validation message element by their IDs
+    var userName = document.getElementById("name");
+    var userEmail = document.getElementById("email");
+    var userText = document.getElementById("text");
+    var msg = document.getElementById("ValidateMsg"); // Element to display validation message
+    // Check if any of the fields are invalid using checkValidity()
+    if (!userName.checkValidity() || !userEmail.checkValidity() || !userText.checkValidity()) {
+        // If any field is invalid, display an error message
+        msg.innerHTML = "Please fill out the form correctly so I can get back to you :)";
+    }
+ } 

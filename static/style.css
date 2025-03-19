@@ -67,7 +67,7 @@ form * {
 .error-message {
     color: #d9534f;
     font-size: 0.9em;
-
+    display: block;
     margin-top: 5px;
   }
 
@@ -85,3 +85,8 @@ img {
     color: red; /* Default color */
     font-weight: bold;
 }
+
+#ValidateMsg {
+    width: max-content;
+    margin: auto;
+ }

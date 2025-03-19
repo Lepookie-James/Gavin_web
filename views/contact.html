@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Me</title>
     <link rel="stylesheet" href="../static/style.css">
-    <script src="../static/script.js"></script> <!-- Removed defer -->
+    <script defer src="../static/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,29 +23,17 @@
     </header>
     <div class="main">
         <h2>Contact me</h2>
-        <form action="#" method="post" id="contactForm" onsubmit="return validateForm(event)">
-            <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name">
-                <span id="nameError" class="error-message"></span>
-            </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email">
-                <span id="emailError" class="error-message"></span>
-            </div>
-            <div class="form-group">
-                <label for="comment">Comment:</label>
-                <textarea id="comment" name="comment"></textarea>
-                <span id="commentError" class="error-message"></span>
-            </div>
-            <div>
-                <input type="submit" value="Submit">
-            </div>
-            <!-- General error message appears below the submit button -->
-            <p id="generalError" class="error-message" style="display: none; color: red;"></p>
-        </form>
-        <table border="1">
+        <form>
+            <label for="name">Your name (required)</label>
+            <input type="text" name="name" id="name" required>
+            <label for="email">Your email (required)</label>
+            <input type="email" name ="email" id="email">
+            <label for="comment">Your message (required)</label>
+            <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+            <input type="submit" value="Send" onclick="validate()">
+    </form>
+    <p id="ValidateMsg"></p>
+        <table>
             <tr>
                 <th>Contact Method</th>
                 <th>Details</th>
