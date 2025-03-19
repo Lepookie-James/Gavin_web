@@ -68,3 +68,13 @@ img {
     width: 350px;
     height: 300px;
 }
+
+#funList {
+    display: none;
+}
+
+#formMessage {
+    display: block; /* Ensure it's always visible */
+    color: red; /* Default color */
+    font-weight: bold;
+}

@@ -10,11 +10,12 @@
     <title>Document</title>
     <link rel="stylesheet" href="static/style.css">
     <script src="./static/script.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body onload="addYear()">
     <header>
         <h1 id="webname">Gavin Lin</h1>
         <nav>
@@ -27,13 +28,18 @@
     <div class="main">
         <h2 id="greeting">Hi, my name is Gavin Lin</h2>
         <img src="static/lebron.jpg.jpg" alt="Your Image">
-        <p id="intro">Gavin is a student studying Business and Information System at Carnegie Mellon. 
-            He is in several clubs at the university and have a lot of different passions. 
-            His favorite habits are playing basketball, gym and a lot of video games. This website serve as a quick intro to Gavin and the reason
-            he picked lebron as the image because he could not find a recent headshot and he likes lebron a lot.</p>
+        <p id="intro">Gavin is a student studying Business and Information System at Carnegie Mellon. </p>
+        <section id="bio">
+            <p id="shortBio">This is a short version of my bio. <button id="readMore">Read More</button></p>
+            <p id="fullBio" style="display: none;">Gavin is a student studying Business and Information System at Carnegie Mellon. 
+                He is in several clubs at the university and have a lot of different passions. 
+                His favorite habits are playing basketball, gym and a lot of video games. This website serve as a quick intro to Gavin and the reason
+                he picked lebron as the image because he could not find a recent headshot and he likes lebron a lot. <button id="readLess">Read Less</button></p>
+        </section>
     </div>
     <footer>
-        2025 designed and coded by Gavin Lin
+        <p id="copyYear"></p>
+        <p>&copy; Designed by Gavin Lin</p>
     </footer>
 </body>
 </html>

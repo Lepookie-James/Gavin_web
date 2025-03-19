@@ -1,15 +1,12 @@
-<meta name="author" content="Your name">
-<meta name="keywords" content="Carnegie Mellon University, Information Systems">
-<meta name="description" content="Your name professional website">
-<title> Lin</title>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact Me</title>
     <link rel="stylesheet" href="../static/style.css">
-    <script src="./static/script.js" defer></script>
+    <script src="../static/script.js"></script> <!-- Removed defer -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -26,12 +23,13 @@
     </header>
     <div class="main">
         <h2>Contact me</h2>
-        <form>
-            Name: <input type="text" required><br>
-            Email: <input type="email" required><br>
-            Comment: <textarea required></textarea><br>
+        <form id="contactForm" onsubmit="validateForm(event)">
+            Name: <input type="text" id="name" required><br>
+            Email: <input type="email" id="email" required><br>
+            Comment: <textarea id="message" required></textarea><br>
             <button type="submit">Submit</button>
         </form>
+        <p id="formMessage" style="font-weight: bold;"></p>
         <table border="1">
             <tr>
                 <th>Contact Method</th>
@@ -48,7 +46,8 @@
         </table>
     </div>
     <footer>
-        2025 designed and coded by Gavin Lin
+        <p id="copyYear"></p>
+        <p>&copy; Designed by Gavin Lin</p>
     </footer>
 </body>
 </html>

@@ -9,7 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../static/style.css">
-    <script src="./static/script.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../static/script.js" defer></script>
 </head>
 <body>
     <header>
@@ -23,7 +24,8 @@
     </header>
     <div class="main">
         <h2>Things I love to do for fun</h2>
-    <ul>
+    <button id="showListButton" onclick="showList()">Click to see...</button>
+    <ul id="funList" style="display: none;">
         <li>Basketball</li>
         <li>Sleep ZZZ</li>
         <li>Reading</li>
@@ -33,7 +35,8 @@
     </ul>
     </div>
     <footer>
-        2025 designed and coded by Gavin Lin
+        <p id="copyYear"></p>
+        <p>&copy; Designed by Gavin Lin</p>
     </footer>
 </body>
 </html>
