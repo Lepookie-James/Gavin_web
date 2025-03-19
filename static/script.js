@@ -141,29 +141,62 @@ document.addEventListener("DOMContentLoaded", function () {
 
 console.log("Script loaded!"); // Debugging log
 
+
+function addYear() {
+    const year = new Date().getFullYear();
+    document.getElementById("copyYear").textContent = year;
+}
+
+
 function validateForm(event) {
-    console.log("validateForm called"); // Debugging log
-    event.preventDefault(); // Prevent form submission
+    event.preventDefault(); // Prevent default form submission
 
-    // Get form fields by their IDs
-    let name = document.getElementById("name");
-    let email = document.getElementById("email");
-    let message = document.getElementById("message");
-    let formMessage = document.getElementById("formMessage");
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const commentInput = document.getElementById('comment');
 
-    console.log("Name:", name.value); // Debugging log
-    console.log("Email:", email.value); // Debugging log
-    console.log("Message:", message.value); // Debugging log
+    const nameError = document.getElementById('nameError');
+    const emailError = document.getElementById('emailError');
+    const commentError = document.getElementById('commentError');
+    const generalError = document.getElementById('generalError'); // Error below submit button
 
-    // Check if any field is empty
-    if (!name.value || !email.value || !message.value) {
-        alert("Please fill out all required fields.");
-        formMessage.textContent = "All fields are required. Please fill them out before submitting.";
-        formMessage.style.color = "red"; // Make the message stand out
+    let isValid = true;
+
+    // Clear previous error messages
+    nameError.textContent = "";
+    emailError.textContent = "";
+    commentError.textContent = "";
+    generalError.textContent = ""; 
+    generalError.style.display = "none"; // Hide initially
+
+    // Trim values to remove spaces
+    let nameValue = nameInput.value.trim();
+    let emailValue = emailInput.value.trim();
+    let commentValue = commentInput.value.trim();
+
+    // Check if all fields are empty
+    if (!nameValue && !emailValue && !commentValue) {
+        nameError.textContent = "All fields are required. Please fill out the form."; // Error under name
+        generalError.textContent = "All fields are required. Please fill out the form."; // Error below submit
+        generalError.style.display = "block"; // Show general error
+        isValid = false;
     } else {
-        formMessage.textContent = "Form submitted successfully!";
-        formMessage.style.color = "green"; // Success message in green
-        // Uncomment the line below to actually submit the form
-        // document.getElementById("contactForm").submit();
+        // Validate individual fields
+        if (!nameValue) {
+            nameError.textContent = "Name is required.";
+            isValid = false;
+        }
+
+        if (!emailValue) {
+            emailError.textContent = "Email is required.";
+            isValid = false;
+        }
+
+        if (!commentValue) {
+            commentError.textContent = "Comment is required.";
+            isValid = false;
+        }
     }
+
+    return isValid;
 }

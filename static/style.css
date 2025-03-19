@@ -64,6 +64,13 @@ form * {
     cursor: pointer;
 }
 
+.error-message {
+    color: #d9534f;
+    font-size: 0.9em;
+
+    margin-top: 5px;
+  }
+
 img {
     width: 350px;
     height: 300px;

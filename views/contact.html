@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body onload="addYear()">
     <header>
         <h1 id="webname">Gavin Lin</h1>
         <nav>
@@ -23,13 +23,28 @@
     </header>
     <div class="main">
         <h2>Contact me</h2>
-        <form id="contactForm" onsubmit="validateForm(event)">
-            Name: <input type="text" id="name" required><br>
-            Email: <input type="email" id="email" required><br>
-            Comment: <textarea id="message" required></textarea><br>
-            <button type="submit">Submit</button>
+        <form action="#" method="post" id="contactForm" onsubmit="return validateForm(event)">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+                <span id="nameError" class="error-message"></span>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <span id="emailError" class="error-message"></span>
+            </div>
+            <div class="form-group">
+                <label for="comment">Comment:</label>
+                <textarea id="comment" name="comment"></textarea>
+                <span id="commentError" class="error-message"></span>
+            </div>
+            <div>
+                <input type="submit" value="Submit">
+            </div>
+            <!-- General error message appears below the submit button -->
+            <p id="generalError" class="error-message" style="display: none; color: red;"></p>
         </form>
-        <p id="formMessage" style="font-weight: bold;"></p>
         <table border="1">
             <tr>
                 <th>Contact Method</th>
