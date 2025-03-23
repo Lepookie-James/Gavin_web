@@ -3,13 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Me</title>
+    <title>Contact Page</title>
     <link rel="stylesheet" href="../static/style.css">
-    <script defer src="../static/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="../static/script.js" defer></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (window.location.href.includes("contact.html")) {
+                console.log("Contact page loaded. All contact-specific scripts ready.");
+            }
+
+            if (window.location.href.includes("fun.html")) {
+                console.log("Fun page loaded. Functions like getAdvice() available.");
+            }
+
+            if (window.location.href.includes("index.html")) {
+                console.log("Home page loaded. Greeting and bio toggle ready.");
+            }
+        });
+    </script>
 </head>
 <body onload="addYear()">
     <header>
@@ -21,32 +33,38 @@
             <a href="fun.html" class="nav-link">For Fun</a>
         </nav>
     </header>
-    <div class="main">
-        <h2>Contact me</h2>
-        <form>
-            <label for="name">Your name (required)</label>
-            <input type="text" name="name" id="name" required>
-            <label for="email">Your email (required)</label>
-            <input type="email" name ="email" id="email">
-            <label for="comment">Your message (required)</label>
-            <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
-            <input type="submit" value="Send" onclick="validate()">
-    </form>
-    <p id="ValidateMsg"></p>
-        <table>
-            <tr>
-                <th>Contact Method</th>
-                <th>Details</th>
-            </tr>
-            <tr>
-                <td>Email</td>
-                <td>gavinlin@andrew.cmu.edu</td>
-            </tr>
-            <tr>
-                <td>Phone</td>
-                <td>+6506665005</td>
-            </tr>
-        </table>
+    <div class="mainLayout">
+        <div class="item1">
+            <h2>Find Me</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6066.174409760003!2d-79.94391324089177!3d40.44499270556051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8834f21f58679a9f%3A0xa4dc782d726fd9ee!2sTepper%20School%20of%20Business!5e0!3m2!1sen!2sus!4v1742767692659!5m2!1sen!2sus" width="500" height="350" style="border:0; border-radius: 12px; box-shadow: 0px 4px 10px rgba(0,0,0,0.2); margin: 20px auto; display: block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <table>
+                <tr>
+                    <th>Contact Method</th>
+                    <th>Details</th>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td>gavinlin@andrew.cmu.edu</td>
+                </tr>
+                <tr>
+                    <td>Phone</td>
+                    <td>+6506665005</td>
+                </tr>
+            </table>
+        </div>
+        <div class="item2">
+            <h2>Contact Me</h2>
+            <form>
+                <label for="name">Your name (required)</label>
+                <input type="text" name="name" id="name" required>
+                <label for="email">Your email (required)</label>
+                <input type="email" name="email" id="email">
+                <label for="comment">Your message (required)</label>
+                <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+                <input type="submit" value="Send" onclick="validate()">
+            </form>
+            <p id="ValidateMsg"></p>
+        </div>
     </div>
     <footer>
         <p id="copyYear"></p>

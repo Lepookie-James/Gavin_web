@@ -75,11 +75,11 @@ img {
     width: 350px;
     height: 300px;
 }
-
+/*
 #funList {
     display: none;
 }
-
+*/
 #formMessage {
     display: block; /* Ensure it's always visible */
     color: red; /* Default color */
@@ -90,3 +90,64 @@ img {
     width: max-content;
     margin: auto;
  }
+
+ .funIMG {
+    width: 250px;
+    height: 200px;
+    border-radius: 100%;
+    display: block;
+    margin: auto;
+}
+
+/* Style the advice container */
+.container {
+    border-radius: 10%;
+    display: inline-block;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* Button styling similar to contact form button */
+.submit-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.submit-btn:hover {
+    background-color: #218838;
+}
+
+.item1, .item2 {
+    flex: 1 1 400px;
+    max-width: 600px;
+}
+
+.item1 iframe {
+    display: block;
+    margin: 20px auto;
+}
+
+.item2 .container {
+    margin-top: 30px;
+}
+
+.mainLayout {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    margin: 20px;
+}
+
+.mainLayout > div {
+    flex: 1 1 300px;
+    max-width: 500px;
+}

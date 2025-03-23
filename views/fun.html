@@ -1,13 +1,9 @@
-<meta name="author" content="Your name">
-<meta name="keywords" content="Carnegie Mellon University, Information Systems">
-<meta name="description" content="Your name professional website">
-<title> Lin</title>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fun Page</title>
     <link rel="stylesheet" href="../static/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="../static/script.js" defer></script>
@@ -22,17 +18,31 @@
             <a href="fun.html" class="nav-link">For Fun</a>
         </nav>
     </header>
-    <div class="main">
-        <h2>Things I love to do for fun</h2>
-    <button id="showListButton" onclick="showList()">Click to see...</button>
-    <ul id="funList" style="display: none;">
-        <li>Basketball</li>
-        <li>Sleep ZZZ</li>
-        <li>Reading</li>
-        <li>Gaming</li>
-        <li>Gym</li>
-        <li>Touch grass</li>
-    </ul>
+    <div class="mainLayout">
+        <div class="item1">
+            <h2>Things I love to do for fun</h2>
+            <ul id="funList">
+                <li>Basketball</li>
+                <li>Sleep ZZZ</li>
+                <li>Reading</li>
+                <li>Gaming</li>
+                <li>Gym</li>
+                <li>Touch grass</li>
+            </ul>
+            <div class="item3">
+                <iframe width="500" height="315" src="https://www.youtube.com/embed/kGiaKTHmfyE?si=tNc-8vlCPl_BagED" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="item2">
+            <img src="../static/fun_image.jpg.jpg" alt="Fun Image" class="funIMG">
+            <div class="item4">
+                <div class="container">
+                    <h2>Need Some Advice?</h2>
+                    <p id="adviceText">Click the button to get a random piece of advice!</p>
+                    <button class="submit-btn" onclick="getAdvice()">Get Advice</button>
+                </div>
+            </div>
+        </div>
     </div>
     <footer>
         <p id="copyYear"></p>

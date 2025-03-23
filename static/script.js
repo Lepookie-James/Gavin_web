@@ -82,7 +82,7 @@ function addYear() {
     const year = new Date().getFullYear();
     document.getElementById("copyYear").textContent = year;
 }
-
+/*
 function showList() {
     let list = document.getElementById("funList");
     let button = document.getElementById("showListButton");
@@ -92,7 +92,19 @@ function showList() {
         button.style.display = "none"; 
     }
 }
+*/
 
+function getAdvice() {
+    fetch('https://api.adviceslip.com/advice')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("adviceText").innerText = data.slip.advice;
+        })
+        .catch(error => {
+            console.error("Error fetching advice: ", error);
+            document.getElementById("adviceText").innerText = "Oops! Could not fetch advice. Please try again.";
+        });
+}
 
 function showError(input, message) {
     let error = document.createElement("p");
