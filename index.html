@@ -1,45 +1,46 @@
-<meta name="author" content="Your name">
-<meta name="keywords" content="Carnegie Mellon University, Information Systems">
-<meta name="description" content="Your name professional website">
-<title> Lin</title>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="author" content="Gavin Lin">
+    <meta name="keywords" content="Carnegie Mellon University, Information Systems">
+    <meta name="description" content="Gavin Lin professional website">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Gavin Lin</title>
     <link rel="stylesheet" href="static/style.css">
-    <script src="./static/script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./static/script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
-<body onload="addYear()">
+<body>
     <header>
         <h1 id="webname">Gavin Lin</h1>
         <nav>
             <a href="index.html" class="nav-link">Home</a> |
             <a href="views/cv.html" class="nav-link">CV</a> |
             <a href="views/contact.html" class="nav-link">Contact Me</a> |
-            <a href="views/fun.html" class="nav-link">For Fun</a>
+            <a href="views/fun.html" class="nav-link">For Fun</a> |
+            <a href="views/template.html" class="nav-link">Template Page</a>
+            <i class="fas fa-bars hamburger"></i>
         </nav>
     </header>
     <div class="main">
         <h2 id="greeting">Hi, my name is Gavin Lin</h2>
         <img src="static/lebron.jpg.jpg" alt="Your Image">
-        <p id="intro">Gavin is a student studying Business and Information System at Carnegie Mellon. </p>
+        <p id="intro">Gavin is a student studying Business and Information System at Carnegie Mellon.</p>
         <section id="bio">
             <p id="shortBio">This is a short version of my bio. <button id="readMore">Read More</button></p>
             <p id="fullBio" style="display: none;">Gavin is a student studying Business and Information System at Carnegie Mellon. 
-                He is in several clubs at the university and have a lot of different passions. 
-                His favorite habits are playing basketball, gym and a lot of video games. This website serve as a quick intro to Gavin and the reason
-                he picked lebron as the image because he could not find a recent headshot and he likes lebron a lot. <button id="readLess">Read Less</button></p>
+                He is in several clubs at the university and has a lot of different passions. 
+                His favorite habits are playing basketball, going to the gym, and playing video games. This website serves as a quick intro to Gavin and the reason
+                he picked LeBron as the image is because he could not find a recent headshot and he likes LeBron a lot. <button id="readLess">Read Less</button></p>
         </section>
     </div>
     <footer>
-        <p id="copyYear"></p>
-        <p>&copy; Designed by Gavin Lin</p>
+        <p id="copyYear">&copy; Designed by Gavin Lin</p>
     </footer>
 </body>
 </html>

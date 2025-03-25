@@ -1,0 +1,129 @@
+.container {
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "nav mainimg"
+      "maincontent bottomcontent"
+      "footer footer";
+    grid-template-columns: auto 3fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .header {
+    grid-area: header;
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .nav {
+    grid-area: nav;
+    background-color: #ddd;
+    padding: 20px;
+    width: 200px; /* This fixes the width */
+  }
+  
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .nav-links li {
+    margin-bottom: 10px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .nav-links a:hover {
+    color: darkorange;
+  }
+  .nav-links a.active {
+    color: blue;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  
+  
+  .hamburger {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .mainimg {
+    grid-area: mainimg;
+    background-color: #ccc;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .mainimg img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .maincontent {
+    grid-area: maincontent;
+    background-color: #eee;
+    padding: 20px;
+  }
+  
+  .bottomcontent {
+    grid-area: bottomcontent;
+    background-color: #ddd;
+    padding: 20px;
+  }
+  
+  .footer {
+    grid-area: footer;
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .container {
+      grid-template-areas:
+        "header"
+        "nav"
+        "mainimg"
+        "maincontent"
+        "bottomcontent"
+        "footer";
+      grid-template-columns: 1fr;
+    }
+  
+    .nav-links {
+      display: none;
+    }
+  
+    .nav-links.show {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      text-align: center;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  }
+  
+  .header h1 {
+    animation: headerColorChange 5s infinite alternate;
+  }
+  
+  @keyframes headerColorChange {
+    0% { color: black; }
+    50% { color: darkblue; }
+    100% { color: crimson; }
+  }
+  
